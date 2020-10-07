@@ -82,7 +82,7 @@ void loop() {
               distL = dist;
               //Prints 4 if hand is held at a distance of less than 3 cm
               if (distL <= 3) {
-                Serial.println("4");
+                Serial.println("8");
                 delay(200);
               }
               //Checks if hand is moving backward and prints 6
@@ -90,19 +90,19 @@ void loop() {
                 if (distL > 40) {
                   continue;
                 }
-                Serial.println("6");
+                Serial.println("9");
                 delay(400);
               }
               //Checks if hand is moving towards the computer
               else if ((temp - 2) > distR) {
-                Serial.println("5");
+                Serial.println("10");
                 delay(400);
               }
             }
           }
           //If hand is kept stable for a second, then it prints 2
           else if (distL > 30) {
-            Serial.println("2");
+            Serial.println("8");
           }
         }
         delay(200);
